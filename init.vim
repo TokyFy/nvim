@@ -5,7 +5,7 @@ set smartindent
 set scrolloff=8
 set number
 set relativenumber
-colorscheme habamax
+colorscheme sorbet 
 
 let mapleader = " "
 nnoremap <leader>n :Vex<CR>
