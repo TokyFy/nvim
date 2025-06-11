@@ -1,3 +1,15 @@
+-- ************************************************************************** --
+--                                                                            --
+--                                                        :::      ::::::::   --
+--   init.lua                                           :+:      :+:    :+:   --
+--                                                    +:+ +:+         +:+     --
+--   By: franaivo <franaivo@student.42antananarivo  +#+  +:+       +#+        --
+--                                                +#+#+#+#+#+   +#+           --
+--   Created: 2025/06/11 14:41:39 by franaivo          #+#    #+#             --
+--   Updated: 2025/06/11 14:41:57 by franaivo         ###   ########.fr       --
+--                                                                            --
+-- ************************************************************************** --
+
 require 'core.options'
 require 'core.keymaps'
 
@@ -46,6 +58,21 @@ require('lazy').setup({
         ---@module "ibl"
         ---@type ibl.config
         opts = {},
-    }
+    },
+    {
+        "Diogo-ss/42-header.nvim",
+        cmd = { "Stdheader" },
+        keys = { "<F1>" },
+        opts = {
+            default_map = true, -- Default mapping <F1> in normal mode.
+            auto_update = true, -- Update header when saving.
+            user = "franaivo", -- Your user.
+            mail = "franaivo@student.42antananarivo.mg", -- Your mail.
+            -- add other options.
+        },
+        config = function(_, opts)
+            require("42header").setup(opts)
+        end,
+}
 })
 
