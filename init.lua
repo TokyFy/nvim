@@ -18,10 +18,34 @@ require('lazy').setup({
     require 'plugins.neotree',
     require 'plugins.theme',
     require 'plugins.lspconfigs',
+    require 'plugins.telescope' ,
     {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.8',
-        dependencies = { 'nvim-lua/plenary.nvim' , 'BurntSushi/ripgrep' , 'nvim-treesitter/nvim-treesitter' , 'sharkdp/fd' }
+        "goolord/alpha-nvim",
+        -- dependencies = { 'echasnovski/mini.icons' },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+          local startify = require("alpha.themes.startify")
+          -- available: devicons, mini, default is mini
+          -- if provider not loaded and enabled is true, it will try to use another provider
+          startify.file_icons.provider = "devicons"
+          require("alpha").setup(
+            startify.config
+          )
+        end,
+    },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
     }
 })
 

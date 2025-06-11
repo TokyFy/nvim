@@ -1,4 +1,5 @@
 vim.wo.number = true -- Make line numbers default (default: false)
+vim.o.showtabline = 0 -- Remove tab line
 vim.o.relativenumber = true -- Set relative numbered lines (default: false)
 vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim. (default: '')
 vim.o.wrap = false -- Display lines as one long line (default: true)
@@ -23,7 +24,6 @@ vim.o.whichwrap = 'bs<>[]hl' -- Which "horizontal" keys are allowed to travel to
 vim.o.numberwidth = 4 -- Set number column width to 2 {default 4} (default: 4)
 vim.o.swapfile = false -- Creates a swapfile (default: true)
 vim.o.smartindent = true -- Make indenting smarter again (default: false)
-vim.o.showtabline = 2 -- Always show tabs (default: 1)
 vim.o.backspace = 'indent,eol,start' -- Allow backspace on (default: 'indent,eol,start')
 vim.o.pumheight = 10 -- Pop up menu height (default: 0)
 vim.o.conceallevel = 0 -- So that `` is visible in markdown files (default: 1)
