@@ -1,16 +1,14 @@
-return	{
-		"shaunsingh/nord.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-				vim.g.nord_contrast = true
-				vim.g.nord_borders = false
-				vim.g.nord_disable_background = true
-				vim.g.nord_italic = false
-				vim.g.nord_uniform_diff_background = true
-				vim.g.nord_bold = false
-
-				require('nord').set()
-		end
-	}
-
+return {
+    "zenbones-theme/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    dependencies = "rktjmp/lush.nvim",
+    lazy = false,
+    priority = 1000,
+    -- you can set set configuration options here
+    config = function()
+        vim.g.zenbones_darken_comments = 45
+        vim.cmd.colorscheme('tokyobones')
+    end
+}

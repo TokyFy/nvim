@@ -17,22 +17,11 @@ rtp:prepend(lazypath)
 require('lazy').setup({
     require 'plugins.neotree',
     require 'plugins.theme',
-
+    require 'plugins.lspconfigs',
     {
-        'neovim/nvim-lspconfig',
-        config = function()
-            local lspconfig = require('lspconfig')
-
-            -- Enable clangd for C/C++
-            lspconfig.clangd.setup {}
-
-            -- Optional: nicer diagnostics
-            vim.diagnostic.config({
-              virtual_text = true,
-              signs = true,
-              underline = true,
-              update_in_insert = false,
-            })
-        end,
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.8',
+        dependencies = { 'nvim-lua/plenary.nvim' , 'BurntSushi/ripgrep' , 'nvim-treesitter/nvim-treesitter' , 'sharkdp/fd' }
     }
 })
+

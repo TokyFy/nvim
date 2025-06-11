@@ -19,3 +19,7 @@ vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
 
 -- delete single character without copying into register
 vim.keymap.set('n', 'x', '"_x', opts)
+
+vim.keymap.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>' , opts)
+vim.keymap.set('n', '<leader>fg', '<cmd> Telescope live_grep <CR>' , opts)
+
