@@ -23,3 +23,8 @@ vim.keymap.set('n', 'x', '"_x', opts)
 vim.keymap.set('n', '<leader>ff', '<cmd> Telescope find_files <CR>' , opts)
 vim.keymap.set('n', '<leader>fg', '<cmd> Telescope live_grep <CR>' , opts)
 
+vim.keymap.set('n', '<leader>t', function()
+    vim.cmd("Neotree close")
+    vim.cmd("term")
+    vim.cmd("startinsert")
+end, opts)
