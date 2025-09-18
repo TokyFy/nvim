@@ -28,7 +28,6 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
 	require 'plugins.neotree',
-	require 'plugins.theme',
 	require 'plugins.lspconfigs',
 	require 'plugins.telescope',
 	require 'plugins.nvimcmp',
