@@ -35,6 +35,7 @@ require('lazy').setup({
 	require 'plugins.autopairs',
 	require 'plugins.blankline',
 	require 'plugins.ft-header',
+	require 'plugins.theme',
     {
         "jackplus-xyz/binary.nvim",
         opts = {
