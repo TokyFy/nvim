@@ -28,9 +28,13 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
 	require 'plugins.neotree',
+	require 'plugins.mason',
 	require 'plugins.lspconfigs',
 	require 'plugins.telescope',
 	require 'plugins.nvimcmp',
+	require 'plugins.treesitter',
+	require 'plugins.conform',
+	require 'plugins.autotag',
 	require 'plugins.alpha',
 	require 'plugins.autopairs',
 	require 'plugins.blankline',
@@ -44,10 +48,9 @@ require('lazy').setup({
             fg = "#E1C7E5",
             bg = "#0A0A0A",
           },
-          -- Customize the reversed groups
           reversed_group = {
-            Title = true,  -- Add a new reversed group
-            Search = false, -- Disable a default reversed group
+            Title = true, 
+            Search = false,
           },
         },
     }
