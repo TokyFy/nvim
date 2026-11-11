@@ -10,10 +10,6 @@ return {
 				"html",
 				"css",
 				"json",
-				"lua",
-				"c",
-				"markdown",
-				"markdown_inline",
 			},
 			auto_install = true,
 			highlight = {

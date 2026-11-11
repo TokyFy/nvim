@@ -30,33 +30,9 @@ require('lazy').setup({
 	require 'plugins.neotree',
 	require 'plugins.mason',
 	require 'plugins.lspconfigs',
-	require 'plugins.telescope',
 	require 'plugins.nvimcmp',
 	require 'plugins.treesitter',
-    -- require 'plugins.conform',
 	require 'plugins.autotag',
-	require 'plugins.alpha',
 	require 'plugins.autopairs',
-	require 'plugins.blankline',
-	require 'plugins.ft-header',
 	require 'plugins.theme',
-    {
-        "jackplus-xyz/binary.nvim",
-        opts = {
-          style = "system",
-          colors = {
-            fg = "#E1C7E5",
-            bg = "#0A0A0A",
-          },
-          reversed_group = {
-            Title = true, 
-            Search = false,
-          },
-        },
-    },
-    {
-        "ellisonleao/glow.nvim",
-        config = true,
-        cmd = "Glow"
-    }
 })

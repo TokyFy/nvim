@@ -8,12 +8,7 @@ return  {
         local lspconfig = require('lspconfig')
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-        -- Enable clangd for C/C++
-        lspconfig.clangd.setup {
-            capabilities = capabilities,
-        }
-
-        -- TypeScript / JavaScript (Next.js)
+        -- TypeScript / JavaScript
         lspconfig.ts_ls.setup {
             capabilities = capabilities,
             filetypes = {
@@ -91,4 +86,3 @@ return  {
         })
     end,
 }
-

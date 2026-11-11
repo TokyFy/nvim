@@ -21,7 +21,6 @@ return {
 				"emmet_ls",
 				"cssls",
 				"html",
-				"clangd",
 			},
 			automatic_installation = true,
 		})
