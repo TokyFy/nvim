@@ -33,7 +33,7 @@ require('lazy').setup({
 	require 'plugins.telescope',
 	require 'plugins.nvimcmp',
 	require 'plugins.treesitter',
-	require 'plugins.conform',
+    -- require 'plugins.conform',
 	require 'plugins.autotag',
 	require 'plugins.alpha',
 	require 'plugins.autopairs',
@@ -53,5 +53,10 @@ require('lazy').setup({
             Search = false,
           },
         },
+    },
+    {
+        "ellisonleao/glow.nvim",
+        config = true,
+        cmd = "Glow"
     }
 })
